@@ -1,0 +1,132 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "shacl": "http://www.w3.org/ns/shacl#",
+    "lincd": "https://purl.org/on/lincd/",
+    "npm": "http://purl.org/on/npm/",
+    "lincd-server": "http://lincd.org/ont/lincd-server/",
+    "lincd-storage": "http://lincd.org/ont/lincd-storage",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "this": "http://localhost:4000/data/node-file-store/main/"
+  },
+  "@graph": [
+    {
+      "@id": "https://data.lincd.org/module/lincd-foaf",
+      "@type": "lincd:Module",
+      "npm:packageName": "lincd-foaf"
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-foaf/shape/person",
+      "@type": "shacl:NodeShape",
+      "shacl:property": [
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/depiction"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/email"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/homepage"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/knows"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/name"
+        }
+      ],
+      "shacl:targetClass": {
+        "@id": "foaf:Person"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-foaf/shapeclass/person",
+      "@type": "lincd:ShapeClass",
+      "lincd:definesShape": {
+        "@id": "https://data.lincd.org/module/lincd-foaf/shape/person"
+      },
+      "lincd:module": {
+        "@id": "https://data.lincd.org/module/lincd-foaf"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-jsonld-store/shape/jsonldstore",
+      "@type": "shacl:NodeShape"
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-jsonld-store/shapeclass/jsonldstore",
+      "@type": "lincd:ShapeClass",
+      "lincd:definesShape": {
+        "@id": "https://data.lincd.org/module/lincd-jsonld-store/shape/jsonldstore"
+      },
+      "lincd:module": {
+        "@id": "https://data.lincd.org/module/lincd-jsonld-store"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-server/shape/frontendfilestore",
+      "@type": "shacl:NodeShape",
+      "shacl:targetClass": {
+        "@id": "lincd-server:FrontendFileStore"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-server/shape/frontendstore",
+      "@type": "shacl:NodeShape",
+      "shacl:targetClass": {
+        "@id": "lincd-server:FrontendStore"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-server/shape/nodefilestore",
+      "@type": "shacl:NodeShape"
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-server/shapeclass/frontendfilestore",
+      "@type": "lincd:ShapeClass",
+      "lincd:definesShape": {
+        "@id": "https://data.lincd.org/module/lincd-server/shape/frontendfilestore"
+      },
+      "lincd:module": {
+        "@id": "https://data.lincd.org/module/lincd-server"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-server/shapeclass/frontendstore",
+      "@type": "lincd:ShapeClass",
+      "lincd:definesShape": {
+        "@id": "https://data.lincd.org/module/lincd-server/shape/frontendstore"
+      },
+      "lincd:module": {
+        "@id": "https://data.lincd.org/module/lincd-server"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-server/shapeclass/nodefilestore",
+      "@type": "lincd:ShapeClass",
+      "lincd:definesShape": {
+        "@id": "https://data.lincd.org/module/lincd-server/shape/nodefilestore"
+      },
+      "lincd:module": {
+        "@id": "https://data.lincd.org/module/lincd-server"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-storage/shape/inmemorystore",
+      "@type": "shacl:NodeShape",
+      "shacl:targetClass": {
+        "@id": "http://lincd.org/ont/lincd-storageInMemoryStore"
+      }
+    },
+    {
+      "@id": "https://data.lincd.org/module/lincd-storage/shapeclass/inmemorystore",
+      "@type": "lincd:ShapeClass",
+      "lincd:definesShape": {
+        "@id": "https://data.lincd.org/module/lincd-storage/shape/inmemorystore"
+      },
+      "lincd:module": {
+        "@id": "https://data.lincd.org/module/lincd-storage"
+      }
+    }
+  ]
+}
