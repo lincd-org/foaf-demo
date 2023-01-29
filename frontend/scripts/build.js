@@ -33,5 +33,4 @@ webpack(config, (err, stats) => {
     // 	chalk.green('\t'+Object.keys(stats.compilation.assets).join('\n\t')),
     // );
   }
-  process.exit();
 });

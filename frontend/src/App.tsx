@@ -1,3 +1,4 @@
+import './_tailwind.scss';
 import {Link} from 'react-router-dom';
 import {lazy, Suspense} from 'react';
 import {ErrorBoundary} from 'react-error-boundary';
@@ -15,7 +16,6 @@ import style from './App.scss.json';
 //In React 18 you can use 'lazy' to import pages only when you need them.
 //This will cause webpack to create multiple bundles, and the right one is automatically loaded
 const Home = lazy(() => import('./pages/Home' /* webpackPrefetch: true */));
-const Page1 = lazy(() => import('./pages/Page1' /* webpackPrefetch: true */));
 
 //store all quads in a file on the backend named 'main'
 export const store = new FrontendFileStore('main');
@@ -24,7 +24,7 @@ Storage.setDefaultStore(store);
 declare var window;
 export default function App({assets = typeof window !== 'undefined' ? window['assetManifest'] : {}}) {
   return (
-    <Html assets={assets} title="foaf-demo - LINCD App">
+    <Html assets={assets} title="foaf-test - LINCD App">
       <Suspense fallback={<Spinner />}>
         <ErrorBoundary FallbackComponent={Error}>
           <Content />
@@ -44,14 +44,6 @@ function Content() {
             element={
               <Suspense fallback={<Spinner />}>
                 <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/page1"
-            element={
-              <Suspense fallback={<Spinner />}>
-                <Page1 />
               </Suspense>
             }
           />
@@ -81,12 +73,11 @@ function Layout({children}) {
 
 function Header() {
   return (
-    <header className={style.header}>
-      <h1>foaf-demo</h1>
-      <nav className={style.menu}>
-        <Link to="/">Home</Link>
-        <Link to="/page1">Page 1</Link>
-      </nav>
+    <header className={style.header+' my-4 text-lg'}>
+      {/*<nav className={style.menu}>*/}
+      {/*  <Link to="/">Home</Link>*/}
+      {/*  <Link to="/page1">Page 1</Link>*/}
+      {/*</nav>*/}
     </header>
   );
 }
@@ -94,7 +85,7 @@ function Header() {
 function Html({assets, children, title}) {
   return (
     <html lang="en">
-      <head suppressHydrationWarning={true}>
+      <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="/static/favicon.ico" />

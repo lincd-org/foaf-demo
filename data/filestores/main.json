@@ -33,6 +33,15 @@
         },
         {
           "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/name"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/img"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/workplacehomepage"
+        },
+        {
+          "@id": "https://data.lincd.org/module/lincd-foaf/shape/person/basednear"
         }
       ],
       "shacl:targetClass": {

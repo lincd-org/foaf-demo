@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "dbpedia": "http://dbpedia.org/resource/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "",
+      "@type": "foaf:PersonalProfileDocument",
+      "foaf:maker": {
+        "@id": "http://w3id.org/people/idafensp"
+      },
+      "foaf:primaryTopic": {
+        "@id": "http://w3id.org/people/idafensp"
+      },
+      "foaf:title": {
+        "@language": "en",
+        "@value": "Idafen Santana-Perez's FOAF file"
+      }
+    },
+    {
+      "@id": "http://w3id.org/people/idafensp",
+      "@type": "foaf:Person",
+      "foaf:based_near": {
+        "@id": "dbpedia:Madrid"
+      },
+      "foaf:family_name": "Santana-Perez",
+      "foaf:givenname": "Idafen",
+      "foaf:holdsAccount": {
+        "@id": "https://twitter.com/idafensp"
+      },
+      "foaf:homepage": {
+        "@id": "https://idafen.wordpress.com/"
+      },
+      "foaf:img": {
+        "@id": "https://en.gravatar.com/idafen#photo-0"
+      },
+      "foaf:mbox": [
+        {
+          "@id": "mailto:isantana@fi.upm.es"
+        },
+        {
+          "@id": "mailto:idafensp@gmail.com"
+        }
+      ],
+      "foaf:name": "Idafen Santana-Perez",
+      "foaf:nick": [
+        "isantana",
+        "idafensp"
+      ],
+      "foaf:schoolHomepage": [
+        {
+          "@id": "http://www.eii.ulpgc.es/"
+        },
+        {
+          "@id": "http://www.fi.upm.es/"
+        }
+      ],
+      "foaf:title": "Dr",
+      "foaf:workplaceHomepage": [
+        {
+          "@id": "http://www.oeg-upm.net/"
+        }
+      ]
+    },
+    {
+      "@id": "http://www.oeg-upm.net/#this",
+      "@type": "foaf:Group",
+      "foaf:member": {
+        "@id": "http://w3id.org/people/idafensp"
+      },
+      "foaf:name": {
+        "@language": "en",
+        "@value": "Ontology Engineering Group (OEG) "
+      }
+    }
+  ]
+}

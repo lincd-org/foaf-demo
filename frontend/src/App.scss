@@ -1,3 +1,37 @@
+$light-blue: #00a9ed;
+$blue: #007db0;
+body {
+  a {
+    color:$blue;
+  }
+  @media(prefers-color-scheme: dark) {
+    background-color:#111822;
+    color:#dddddd;
+    color-scheme: dark;
+    ::-webkit-scrollbar {
+      //width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #333944;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #444;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #777;
+    }
+    a {
+      color:$light-blue;
+    }
+  }
+
+}
+
+
+
 .error {
   color: white;
   margin: 2rem;
@@ -10,9 +44,9 @@
 
 .content {
   display: block;
-  background-color: #f3f3f3;
-  box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.3);
-  padding: 1rem;
+  //background-color: #f3f3f3;
+  //box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.3);
+  //padding: 1rem;
   margin: 1rem 0;
 
   code {
