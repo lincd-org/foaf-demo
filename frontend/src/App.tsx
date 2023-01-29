@@ -73,7 +73,7 @@ function Layout({children}) {
 
 function Header() {
   return (
-    <header className={style.header+' my-4 text-lg'}>
+    <header className={style.header + ' my-4 text-lg'}>
       {/*<nav className={style.menu}>*/}
       {/*  <Link to="/">Home</Link>*/}
       {/*  <Link to="/page1">Page 1</Link>*/}

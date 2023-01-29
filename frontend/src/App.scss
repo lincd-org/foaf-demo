@@ -2,11 +2,11 @@ $light-blue: #00a9ed;
 $blue: #007db0;
 body {
   a {
-    color:$blue;
+    color: $blue;
   }
-  @media(prefers-color-scheme: dark) {
-    background-color:#111822;
-    color:#dddddd;
+  @media (prefers-color-scheme: dark) {
+    background-color: #111822;
+    color: #dddddd;
     color-scheme: dark;
     ::-webkit-scrollbar {
       //width: 8px;
@@ -24,13 +24,10 @@ body {
       background: #777;
     }
     a {
-      color:$light-blue;
+      color: $light-blue;
     }
   }
-
 }
-
-
 
 .error {
   color: white;

@@ -48,10 +48,7 @@
         }
       ],
       "foaf:name": "Idafen Santana-Perez",
-      "foaf:nick": [
-        "isantana",
-        "idafensp"
-      ],
+      "foaf:nick": ["isantana", "idafensp"],
       "foaf:schoolHomepage": [
         {
           "@id": "http://www.eii.ulpgc.es/"
